@@ -8,8 +8,18 @@ var colors = [
 ]
 
 var squares = document.querySelectorAll(".square");
+var pickedColor = colors[3];
+var currentColor = document.getElementById("currentColor");
+
+currentColor.textContent = pickedColor.toUpperCase();
 
 //style.backgroundColor works in all browsers
 for (var i = 0; i < squares.length; i++) {
+  //add initial color to squares
   squares[i].style.backgroundColor = colors[i];
+
+  //add click listeners to squares
+  squares[i].addEventListener("click", function () {
+    alert("clicked square");
+  });
 }
