@@ -29,6 +29,16 @@ for (var i = 0; i < squares.length; i++) {
     }
     else {
       messageDisplay.textContent = "Correct";
+      changeColors(clickedColor);
     }
   });
+}
+
+function changeColors(color) {
+  //loop through all squares
+  for (var i = 0; i < squares.length; i++) {
+    //change color to match given color
+    squares[i].style.backgroundColor = color;
+  }
+
 }
